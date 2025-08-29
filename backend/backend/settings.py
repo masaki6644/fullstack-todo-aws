@@ -133,7 +133,10 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-CORS_ALLOWED_ORIGINS = [
-    # テスト環境
-    "http://localhost:3000",
-]
+# 開発用に全許可
+CORS_ALLOW_ALL_ORIGINS = True
+
+# 本番では特定ドメインのみ許可
+# CORS_ALLOWED_ORIGINS = [
+#     "https://d35kq53ogrg17t.cloudfront.net",
+# ]

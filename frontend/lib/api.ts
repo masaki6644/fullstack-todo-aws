@@ -1,7 +1,8 @@
 import axios from "axios";
 import { Task } from "../types/task";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:8000";
+//const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:8000";
+const API_BASE="https://d35kq53ogrg17t.cloudfront.net";
 
 export const fetchTasks = async (): Promise<Task[]> => {
   const res = await axios.get(`${API_BASE}/tasks/`);
